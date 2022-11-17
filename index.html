@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>&lt;model-viewer&gt; example</title>
+    <title>Web AR for testing experiences</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -33,6 +33,7 @@
 <body>
   <div id="card">
     <!-- All you need to put beautiful, interactive 3D content on your site: -->
+    <!-- MODEL 1 -->
     <model-viewer src="Assets/022_espada.glb"
                   ios-src="https://cdn.glitch.com/25ee8113-90ae-41db-b783-fbbab7de2fc3%2FSpinning_Rings.usdz?v=1592249454231"
                   alt="A 3D model of an astronaut"
@@ -41,6 +42,21 @@
                   interaction-prompt="auto"
                   auto-rotate ar magic-leap>
     </model-viewer>
+    <!-- MODEL 2 -->
+    <model-viewer src="Assets/022_espada.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="Assets/poster.webp" shadow-intensity="1" autoplay auto-rotate camera-orbit="56.84deg 90.92deg auto">
+    <button class="Hotspot" slot="hotspot-1" data-position="-0.015993404287389275m 0.47218538054534326m 0.11896917022614026m" data-normal="0.9765786110910557m 0.020601920637986743m 0.21417230732634587m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Espada facherita</div>
+    </button>
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+</model-viewer>
     <section class="attribution">
       <span>
         <h1>3D Show Piece</h1>
